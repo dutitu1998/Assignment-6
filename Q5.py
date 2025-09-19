@@ -36,6 +36,8 @@ axs[0, 0].axvline(K, color='red', linestyle=':')
 axs[0, 0].set_title('Long Call')
 axs[0, 0].legend()
 axs[0, 0].grid(True)
+axs[0, 0].set_xlabel('Stock Price at Expiration ($)')
+axs[0, 0].set_ylabel('Payoff / Profit ($)')
 
 # Short Call
 axs[0, 1].plot(S, payoff_short_call, label='Payoff')
@@ -45,6 +47,8 @@ axs[0, 1].axvline(K, color='red', linestyle=':')
 axs[0, 1].set_title('Short Call')
 axs[0, 1].legend()
 axs[0, 1].grid(True)
+axs[0, 1].set_xlabel('Stock Price at Expiration ($)')
+axs[0, 1].set_ylabel('Payoff / Profit ($)')
 
 # Long Put
 axs[1, 0].plot(S, payoff_long_put, label='Payoff')
@@ -54,6 +58,8 @@ axs[1, 0].axvline(K, color='red', linestyle=':')
 axs[1, 0].set_title('Long Put')
 axs[1, 0].legend()
 axs[1, 0].grid(True)
+axs[1, 0].set_xlabel('Stock Price at Expiration ($)')
+axs[1, 0].set_ylabel('Payoff / Profit ($)')
 
 # Short Put
 axs[1, 1].plot(S, payoff_short_put, label='Payoff')
@@ -63,11 +69,8 @@ axs[1, 1].axvline(K, color='red', linestyle=':')
 axs[1, 1].set_title('Short Put')
 axs[1, 1].legend()
 axs[1, 1].grid(True)
-
-# Labels
-for ax in axs.flat:
-    ax.set_xlabel('Stock Price at Expiration ($)')
-    ax.set_ylabel('Payoff / Profit ($)')
+axs[1, 1].set_xlabel('Stock Price at Expiration ($)')
+axs[1, 1].set_ylabel('Payoff / Profit ($)')
 
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
